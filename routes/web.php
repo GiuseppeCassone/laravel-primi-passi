@@ -30,3 +30,10 @@ Route::get('/secondPage', function () {
 
     return view('secondPage', compact('videogames'));
 })->name('second');
+
+Route::get('/thirdPage', function () {
+
+    $videogames = ["Dark Souls", "Elden Ring", "Baldur's Gate", "Resident Evil"];
+
+    return view('thirdPage', compact('videogames'));
+})->name('third');
