@@ -11,21 +11,17 @@
 
     <div class="container p-5">
 
-        <a href="{{route('second')}}">SecondPage</a>
-
-        <header>
-            
-        </header>
-
-        <h1>{{ $greeting }}</h1>
+        <h1>VIDEOGIOCHI</h1>
 
         <ul>
-            @foreach($players as $player)
+            @foreach($videogames as $videogame)
                 <li>
-                    {{$player}}
+                    {{$videogame}}
                 </li>
             @endforeach
         </ul>
+
+        
 
     </div>
 

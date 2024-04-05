@@ -22,3 +22,11 @@ Route::get('/', function () {
 
     return view('home', compact("greeting", "players"));
 });
+
+
+Route::get('/secondPage', function () {
+
+    $videogames = ["Dark Souls", "Elden Ring", "Baldur's Gate", "Resident Evil"];
+
+    return view('secondPage', compact('videogames'));
+})->name('second');
