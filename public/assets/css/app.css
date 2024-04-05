@@ -1,0 +1,24 @@
+body{
+    background-image: url(../../img/sfondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.row{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+
+.card{
+    width: calc(100% / 2 - 40px);
+}
+
+img{
+    width: 100%;
+    height: auto;
+}

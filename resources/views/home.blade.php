@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prima Passi</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{asset('assets/css/app.css')}}">
 </head>
 <body>
 
@@ -29,17 +30,19 @@
     
     <div class="container p-5">
 
-        
-
-        <h1>{{ $greeting }}</h1>
-        
-        <ul>
+        <h1 class="text-center mb-5">{{ $greeting }}</h1>
+        <div class="row">
             @foreach($players as $player)
-            <li>
-                {{$player}}
-            </li>
+            <div class="card p-0 shadow-lg">
+                <img src="{{asset('img/' . $player['image'])}}" alt="">
+                <div class="card-body">
+                    <h5 class="card-title">{{$player['name']}}</h5>
+                    <p class="card-text">{{$player['eta']}}</p>
+                    <p class="card-text">{{$player['job']}}</p>
+                </div>             
+            </div>
             @endforeach
-        </ul>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

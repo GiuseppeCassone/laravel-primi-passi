@@ -15,9 +15,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    $greeting = "Hello World!";
+    $greeting = "PLAYERS";
 
-    $players = ["Sabaku", "Yotobi", "Cydonia", "IlMasseo"];
+    $players = [
+        ["name" => "Sabaku", "image" => "Sabaku.jpeg", "eta" => "36 anni", "job" => "Youtuber"],
+        ["name" => "Yotobi", "image" => "Yotobi.png", "eta" => "36 anni", "job" => "Youtuber"],
+        ["name" => "Cydonia", "image" => "Cydonia.jpeg", "eta" => "36 anni", "job" => "Youtuber"],
+        ["name" => "MikeShowSha", "image" => "Mikeshowsha.png", "eta" => "36 anni", "job" => "Youtuber"],
+    ];
 
 
     return view('home', compact("greeting", "players"));
