@@ -17,6 +17,8 @@ Route::get('/', function () {
 
     $greeting = "Hello World!";
 
+    $players = ["Sabaku", "Yotobi", "Cydonia", "IlMasseo"];
 
-    return view('home', compact("greeting"));
+
+    return view('home', compact("greeting", "players"));
 });
